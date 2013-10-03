@@ -38,6 +38,8 @@ import socket
 import cv2
 import scipy as sp
 import zlib
+import time
+from time import sleep
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind((socket.gethostname(),5000))
 server_socket.listen(5)
@@ -86,7 +88,7 @@ if __name__ == "__main__":
           if (cv2.waitKey (5) != -1):
                 break;
    
-
+     sleep(0.1)
    except: 
      print "lost connection"
 
